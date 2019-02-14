@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <style>
+            #divBtn {
+                padding: 30px;
+                width: 450px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <script src = "../../dist/options.js"></script>
+        <div id="divBtn">
+            <div class="input-group mb-3">
+                <input id="MaxTime" type="number" class="form-control" placeholder="Max time in facebook (minutes)" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-dark" type="button" id="changeMaxTime">Change max time</button>
+                </div>
+            </div>
+            <button class="btn btn-outline-dark" id="restartTime">Restart navigation time</button>
+        </div>
+    </body>
+</html>

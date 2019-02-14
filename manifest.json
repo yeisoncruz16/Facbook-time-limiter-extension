@@ -1,0 +1,42 @@
+{
+    "name": "A Counter facebook",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Description",
+    "permissions": [
+        "activeTab",
+        "background",
+        "browsingData",
+        "management",
+        "storage",
+        "tabs",
+        "unlimitedStorage",
+        "*://*/*"
+    ],
+    "background": {
+        "scripts": ["dist/background.js"],
+        "persistent": false
+    },
+    "incognito":"split",
+    "content_scripts": [
+        {
+            "matches" : ["*://www.facebook.com/*"],
+            "js": [
+                "dist/frontend.js",
+                "src/libs/jquery.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16" : "src/icons/main-icon.png"
+        },
+        "default_popup": "src/templates/popup.html"
+    },
+    "options_page": "src/templates/options.html",
+    "web_accessible_resources": [
+        "src/resources/fb.gif",
+        "src/css/style.css"
+    ]
+}
